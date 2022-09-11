@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PYP_Task_PhoneBookConsoleApp_EFandADO.NET", "PYP_Task_PhoneBookConsoleApp_uEFandADO.NET\PYP_Task_PhoneBookConsoleApp_EFandADO.NET.csproj", "{6E023FA9-C312-4969-BED3-CAA64F880F1B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E023FA9-C312-4969-BED3-CAA64F880F1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E023FA9-C312-4969-BED3-CAA64F880F1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E023FA9-C312-4969-BED3-CAA64F880F1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E023FA9-C312-4969-BED3-CAA64F880F1B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {70E5C126-E4EC-495D-967B-51D0615D78D6}
+	EndGlobalSection
+EndGlobal
