@@ -11,8 +11,8 @@ using PYP_Task_PhoneBookConsoleApp_EFandADO.NET.DataContext;
 namespace PYP_Task_PhoneBookConsoleApp_EFandADO.NET.Migrations
 {
     [DbContext(typeof(PhoneBookContext))]
-    [Migration("20220911231132_Mig2")]
-    partial class Mig2
+    [Migration("20220913211424_m1")]
+    partial class m1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -53,7 +53,7 @@ namespace PYP_Task_PhoneBookConsoleApp_EFandADO.NET.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Persons");
+                    b.ToTable("People");
                 });
 #pragma warning restore 612, 618
         }

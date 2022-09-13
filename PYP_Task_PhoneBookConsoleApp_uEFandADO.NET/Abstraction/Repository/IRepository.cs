@@ -1,10 +1,14 @@
-﻿namespace PYP_Task_PhoneBookConsoleApp_EFandADO.NET.Repository;
+﻿using Microsoft.Data.SqlClient;
+using System.Collections;
+using System.Linq.Expressions;
 
-public interface IRepository<T>
+namespace PYP_Task_PhoneBookConsoleApp_EFandADO.NET.Repository;
+
+public interface IRepository<T> where T : class
 {
     Task<int> AddAync(T entity);
     Task<int> UpdateAsync(T entity);
     Task<int> DeleteAsync(T entity);
     Task<T> GetByIdAsync(int id);
-    Task<List<T>> GetAllAsync();
+    IEnumerable<T> Search(Expression<Func<T, bool>> func);
 }

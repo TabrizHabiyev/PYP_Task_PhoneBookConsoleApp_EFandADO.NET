@@ -11,7 +11,8 @@ public class PhoneBookContext : DbContext
     {
         optionsBuilder.UseSqlServer("Server=TABRIZ\\SQLEXPRESS;Database=PhoneBook;Trusted_Connection=True;");
     }
-    public DbSet<Person> Persons { get; set; }
+
+    public DbSet<Person> People { get; set; }
 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

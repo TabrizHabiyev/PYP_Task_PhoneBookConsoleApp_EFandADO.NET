@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PYP_Task_PhoneBookConsoleApp_EFandADO.NET.DataContext;
 using PYP_Task_PhoneBookConsoleApp_EFandADO.NET.Repository;
+using System.Linq.Expressions;
 
 namespace PYP_Task_PhoneBookConsoleApp_EFandADO.NET.Infrastructure
 {
@@ -33,6 +34,12 @@ namespace PYP_Task_PhoneBookConsoleApp_EFandADO.NET.Infrastructure
         {
             return await _dbSet.FindAsync(id);
         }
+
+        public IEnumerable<T> Search(Expression<Func<T, bool>> func)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<int> UpdateAsync(T entity)
         {
             _dbSet.Update(entity);

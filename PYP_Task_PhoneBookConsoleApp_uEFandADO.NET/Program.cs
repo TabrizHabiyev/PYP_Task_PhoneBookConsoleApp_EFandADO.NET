@@ -1,4 +1,5 @@
-﻿using PYP_Task_PhoneBookConsoleApp_EFandADO.NET.Infrastructure;
+﻿using Microsoft.Data.SqlClient;
+using PYP_Task_PhoneBookConsoleApp_EFandADO.NET.Infrastructure;
 using PYP_Task_PhoneBookConsoleApp_EFandADO.NET.Model;
 
 namespace PYP_Task_PhoneBookConsoleApp_EFandADO.NET
@@ -7,7 +8,7 @@ namespace PYP_Task_PhoneBookConsoleApp_EFandADO.NET
     {
         public static void Main(string[] args)
         {
-            AdoRepository<Person> adoRepository = new AdoRepository<Person>();
+            AdoRepository<Person> adoRepository = new AdoRepository<Person>(new SqlConnection("Server=TABRIZ\\SQLEXPRESS;Database=PhoneBook;Trusted_Connection=True;"));
             while (true)
             {
                 Console.WriteLine("1-Add Person");
@@ -107,6 +108,16 @@ namespace PYP_Task_PhoneBookConsoleApp_EFandADO.NET
                         break;
                     case "6":
                         Environment.Exit(0);
+                        break;
+                    case "7":
+                        Console.WriteLine("Search");
+                        var search = Console.ReadLine();
+                        var personList1 = adoRepository.Search(x => x.Name == "Tabriz");
+                        var personList2 = adoRepository.Search(x => x.Name.Contains("Tabriz"));
+                        foreach (var item in personList1)
+                        {
+                            Console.WriteLine($"Id : {item.Id} Name : {item.Name} Surname : {item.Surname} Phone : {item.Phone} Mail : {item.Mail}");
+                        }
                         break;
                     default:
                         Console.WriteLine("Wrong Option");
